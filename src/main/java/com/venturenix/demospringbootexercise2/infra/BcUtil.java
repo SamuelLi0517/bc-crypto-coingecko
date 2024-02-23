@@ -1,16 +1,17 @@
 package com.venturenix.demospringbootexercise2.infra;
 
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponentsBuilder;
 
 public class BcUtil {
   
-  public static String url(Scheme scheme, String domin, String endpoint){
-    return UriComponentsBuilder.newInstance() //
-    .scheme(scheme.lowercaseName())//
-    .host(domin) //
-    .path(endpoint) //
-    .toUriString();
-  }
+  // public static String url(Scheme scheme, String domin, String endpoint){
+  //   return UriComponentsBuilder.newInstance() //
+  //   .scheme(scheme.lowercaseName())//
+  //   .host(domin) //
+  //   .path(endpoint) //
+  //   .toUriString();
+  // }
 
   public static String url(Scheme https, String coingeckoKey, String domain,
       String path, String endpoint, String coinsVsCurrency) {
@@ -23,5 +24,18 @@ public class BcUtil {
        // .queryParam("x_cg_pro_api_key", coingeckoKey)
         .toUriString();
     
-  }
+  // }
+
+  // public static UriComponentsBuilder uriBuilder(Scheme scheme,
+  //     String domain, String path, String endpoint,
+  //     MultiValueMap<String, String> queryParams, String... pathSegments) {
+  //   return UriComponentsBuilder.newInstance()//
+  //       .scheme(scheme.getProtocol())//
+  //       .host(domain)//
+  //       .pathSegment(pathSegments)//
+  //       .path(path)//
+  //       .path(endpoint)//
+  //       .queryParams(queryParams);
+  // }
+}
 }

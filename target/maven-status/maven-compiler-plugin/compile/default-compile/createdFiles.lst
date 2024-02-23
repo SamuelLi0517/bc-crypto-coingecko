@@ -16,6 +16,7 @@ com/venturenix/demospringbootexercise2/infra/BcUtil.class
 com/venturenix/demospringbootexercise2/controller/CoingeckoOperation.class
 com/venturenix/demospringbootexercise2/exception/BusinessRuntimeException.class
 com/venturenix/demospringbootexercise2/model/Coingecko.class
+com/venturenix/demospringbootexercise2/infra/RedisHelper.class
 com/venturenix/demospringbootexercise2/model/Coingecko$Roi$RoiBuilder.class
 com/venturenix/demospringbootexercise2/exception/BusinessException.class
 com/venturenix/demospringbootexercise2/infra/ApiResponse$ApiResponseBuilder.class
@@ -28,4 +29,5 @@ com/venturenix/demospringbootexercise2/infra/TraditionCurrency.class
 com/venturenix/demospringbootexercise2/model/Coingecko$Roi.class
 com/venturenix/demospringbootexercise2/service/CoingeckoService.class
 com/venturenix/demospringbootexercise2/model/CoingeckoDTO$Roi$RoiBuilder.class
+com/venturenix/demospringbootexercise2/repository/CoingeckoRepo.class
 com/venturenix/demospringbootexercise2/DemoSpringBootExercise2Application.class

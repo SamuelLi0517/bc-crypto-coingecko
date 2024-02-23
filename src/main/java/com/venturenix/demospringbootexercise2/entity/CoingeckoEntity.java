@@ -3,10 +3,10 @@ package com.venturenix.demospringbootexercise2.entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonProperty;
-// import jakarta.persistence.Entity;
-// import jakarta.persistence.GeneratedValue;
-// import jakarta.persistence.GenerationType;
-// import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-//@Entity
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -24,8 +24,8 @@ import lombok.ToString;
 
 public class CoingeckoEntity implements Serializable {
 
-  // @Id
-  // @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;// 1,2,3,4,
   private String coinName;
   private String symbol;// "btc"

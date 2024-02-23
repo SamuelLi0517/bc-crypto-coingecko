@@ -1,31 +1,37 @@
 server:
- port: 8080
+  port: 8080
 # https://
 # api.coingecko.com
 # /api/v3/coins/markets
 # vs_currency=usd
 # key =CG-ANCRf2MK6yJT7B7GeiZTPnKR
 api:
- coingecko: 
-  key: CG-ANCRf2MK6yJT7B7GeiZTPnKR
-  domain: api.coingecko.com
-  path: /api/v3
-  endpoint: /coins/markets
-  coins:
-    vs_currency: usd
-    order: market_cap_desc
-    per_page: 100
-    page: 1
-    sparkline: false
-    locale: en
-
-
-
-
-
-
-
-
-
-
-
+  coingecko:
+    key: CG-ANCRf2MK6yJT7B7GeiZTPnKR
+    domain: "api.coingecko.com"
+    path: "/api/v3"
+    endpoint: "/coins/markets"
+    coins:
+      vs_currency: usd
+      order: market_cap_desc
+      per_page: 100
+      page: 1
+      sparkline: false
+      locale: en
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_coingecko
+    username: postgres
+    password: admin1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  show-sql: true
