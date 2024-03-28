@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
@@ -18,77 +20,86 @@ public class Coingecko {
   private String name;
   private String image;
 
-  @JsonProperty("current_price")
+  @JsonProperty(value = "current_price")
   private double currentPrice;
 
-  @JsonProperty("market_cap")
+  @JsonProperty(value = "market_cap")
   private long marketCap;
 
-  @JsonProperty("market_cap_rank")
-  private int marketCapRank;
+  @JsonProperty(value = "market_cap_rank")
+  private long marketCapRank;
 
-  @JsonProperty("fully_diluted_valuation")
+  @JsonProperty(value = "fully_diluted_valuation")
   private long fullyDilutedValuation;
 
-  @JsonProperty("total_volume")
+  @JsonProperty(value = "total_volume")
   private long totalVolume;
 
-  @JsonProperty("high_24h")
+  @JsonProperty(value = "high_24h")
   private double high24h;
 
-  @JsonProperty("low_24")
+  @JsonProperty(value = "low_24")
   private double low24h;
 
-  @JsonProperty("price_change_24h")
+  @JsonProperty(value = "price_change_24h")
   private double priceChange24h;
 
-  @JsonProperty("price_change_percent_24h")
+  @JsonProperty(value = "price_change_percent_24h")
   private double priceChangePercentage24h;
 
-  @JsonProperty("market_cap_change_24h")
+  @JsonProperty(value = "market_cap_change_24h")
   private double marketCapChange24h;
 
-  @JsonProperty("market_cap_change_percentage_24h")
+  @JsonProperty(value = "market_cap_change_percentage_24h")
   private double marketCapChangePercentage24h;
 
-  @JsonProperty("circulating_supply")
+  @JsonProperty(value = "circulating_supply")
   private double circulatingSupply;
 
-  @JsonProperty("total_supply")
+  @JsonProperty(value = "total_supply")
   private double totalSupply;
 
-  @JsonProperty("max_supply")
+  @JsonProperty(value = "max_supply")
   private double maxSupply;
 
+  @JsonProperty(value = "ath")
   private double ath;
 
-  @JsonProperty("ath_change_percentage")
+  @JsonProperty(value = "ath_change_percentage")
   private double athChangePercentage;
 
-  @JsonProperty("ath_date")
+  @JsonProperty(value = "ath_date")
   private LocalDateTime athDate;
 
+  @JsonProperty(value = "atl")
   private double atl;
 
-  @JsonProperty("atl_change_percentage")
+  @JsonProperty(value = "atl_change_percentage")
   private double atlChangePercentage;
 
-  @JsonProperty("atl_dte")
+  @JsonProperty(value = "atl_date")
   private LocalDateTime atlDate;
 
+  @JsonProperty(value = "roi")
   private Roi roi;
 
-  @JsonProperty("last_updated")
-  private String lastUpdated;
+  @JsonProperty(value = "last_updated")
+  private LocalDateTime lastUpdated;
 
   @Data
   @AllArgsConstructor
   @NoArgsConstructor
   @Builder
+  @ToString
   public static class Roi {
 
+    @JsonProperty(value = "times")
     private double times;
+
+    @JsonProperty(value = "currency")
     private String currency;
+
+    @JsonProperty(value = "percentage")
     private double percentage;
   }
 

@@ -1,14 +1,15 @@
 com/venturenix/demospringbootexercise2/model/CoingeckoDTO.class
 com/venturenix/demospringbootexercise2/exception/GlobalExceptionHandler.class
-com/venturenix/demospringbootexercise2/infra/ApiResponse.class
 com/venturenix/demospringbootexercise2/exception/InvalidCurrencyException.class
 com/venturenix/demospringbootexercise2/exception/Code.class
 com/venturenix/demospringbootexercise2/service/impl/CoingeckoServiceImpl.class
+com/venturenix/demospringbootexercise2/infra/ApiResp$ApiResponseBuilder.class
 com/venturenix/demospringbootexercise2/infra/Mapper.class
 com/venturenix/demospringbootexercise2/controller/impl/CoingeckoController.class
 com/venturenix/demospringbootexercise2/exception/ResourceNotFound.class
 com/venturenix/demospringbootexercise2/exception/JPHClientException.class
 com/venturenix/demospringbootexercise2/exception/InvalidCoinException.class
+com/venturenix/demospringbootexercise2/infra/ApiResp.class
 com/venturenix/demospringbootexercise2/entity/CoingeckoEntity.class
 com/venturenix/demospringbootexercise2/model/CoingeckoDTO$Roi.class
 com/venturenix/demospringbootexercise2/model/Coingecko$CoingeckoBuilder.class
@@ -19,7 +20,6 @@ com/venturenix/demospringbootexercise2/model/Coingecko.class
 com/venturenix/demospringbootexercise2/infra/RedisHelper.class
 com/venturenix/demospringbootexercise2/model/Coingecko$Roi$RoiBuilder.class
 com/venturenix/demospringbootexercise2/exception/BusinessException.class
-com/venturenix/demospringbootexercise2/infra/ApiResponse$ApiResponseBuilder.class
 com/venturenix/demospringbootexercise2/model/CoingeckoDTO$CoingeckoDTOBuilder.class
 com/venturenix/demospringbootexercise2/infra/Scheme.class
 com/venturenix/demospringbootexercise2/config/AppConfig.class

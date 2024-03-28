@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.venturenix.demospringbootexercise2.entity.CoingeckoEntity;
 import com.venturenix.demospringbootexercise2.infra.BcUtil;
@@ -52,31 +53,33 @@ public class CoingeckoServiceImpl implements CoingeckoService {
 
   @Override
   public List<Coingecko> getDataFromApi() {
-    String CoingeckoUrl = BcUtil.url(Scheme.HTTPS, coingeckoKey, domain, path,
+    // System.out.println("checkpoint3");
+    UriComponentsBuilder coingeckoUrl = BcUtil.url(Scheme.HTTPS, coingeckoKey, domain, path,
         endpoint, coinsVsCurrency);
-    log.info("CoingeckoUrl : " + CoingeckoUrl);
-    Coingecko[] coingecko =
-        restTemplate.getForObject(CoingeckoUrl, Coingecko[].class);
-
-    return Arrays.stream(coingecko).collect(Collectors.toList());
+    log.info("CoingeckoUrl : " + coingeckoUrl.toUriString());
+    // Coingecko[] coingecko =
+    //     restTemplate.getForObject(coingeckoUrl, Coingecko[].class);
+    // System.out.println("checkpoint4");
+    return Arrays.asList(restTemplate.getForObject(coingeckoUrl.toUriString(), Coingecko[].class));
 
   }
 
   @Override
   public Coingecko getCoingecko(String key) throws JsonProcessingException {
-    String CoingeckoUrl = BcUtil.url(Scheme.HTTPS, coingeckoKey, domain, path,
+    UriComponentsBuilder CoingeckoUrl = BcUtil.url(Scheme.HTTPS, coingeckoKey, domain, path,
         endpoint, coinsVsCurrency);
+        // System.out.println(CoingeckoUrl);
     Coingecko[] coingecko =
-        restTemplate.getForObject(CoingeckoUrl, Coingecko[].class);
+        restTemplate.getForObject(CoingeckoUrl.toUriString(), Coingecko[].class);
 
     // List<CoingeckoEntity> coingeckoEntity = Arrays.stream(coingecko)//
     // .forEach(mapper.map2(Coingecko coingecko))
     // .collect(Collectors.toList())//
     // .get(0);
 
-    List<CoingeckoEntity> coingeckoEntity = Arrays.stream(coingecko)
-        .map(coin -> mapper.map2(coin))//
-        .collect(Collectors.toList());
+    List<CoingeckoEntity> coingeckoEntity =
+        Arrays.stream(coingecko).map(coin -> mapper.map2(coin))//
+            .collect(Collectors.toList());
 
     coingeckoRepo.saveAll(coingeckoEntity);
 

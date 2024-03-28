@@ -43,10 +43,10 @@ public class AppConfig {
     return new RedisHelper(factory, objectMapper);
   }
 
-  @Bean
-  ObjectMapper objectMapper() {
-    return new ObjectMapper();
-  }
+  // @Bean
+  // ObjectMapper objectMapper() {
+  //   return new ObjectMapper();
+  // }
 
 
 }

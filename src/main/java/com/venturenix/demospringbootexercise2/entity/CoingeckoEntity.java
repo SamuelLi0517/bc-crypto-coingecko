@@ -39,7 +39,7 @@ public class CoingeckoEntity implements Serializable {
   private long marketCap;
 
   @JsonProperty("market_cap_rank")
-  private int marketCapRank;
+  private long marketCapRank;
 
   @JsonProperty("fully_diluted_valuation")
   private long fullyDilutedValuation;
@@ -87,12 +87,12 @@ public class CoingeckoEntity implements Serializable {
   @JsonProperty("atl_change_percentage")
   private double atlChangePercentage;
 
-  @JsonProperty("atl_dte")
+  @JsonProperty("atl_date")
   private LocalDateTime atlDate;
 
 
   @JsonProperty("last_updated")
-  private String lastUpdated;
+  private LocalDateTime lastUpdated;
 
   private double times;
   private String currency;

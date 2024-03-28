@@ -6,8 +6,8 @@
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/service/CoingeckoService.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/infra/Scheme.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/infra/BcUtil.java
+/Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/model/CoingeckoResp.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/exception/BusinessRuntimeException.java
-/Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/infra/ApiResponse.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/infra/Mapper.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/exception/ResourceNotFound.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/controller/impl/CoingeckoController.java
@@ -18,6 +18,7 @@
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/entity/CoingeckoEntity.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/model/CoingeckoDTO.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/exception/GlobalExceptionHandler.java
+/Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/infra/ApiResp.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/config/AppConfig.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/controller/CoingeckoOperation.java
 /Users/samuelli/bc-crypto-coingecko/src/main/java/com/venturenix/demospringbootexercise2/service/impl/CoingeckoServiceImpl.java

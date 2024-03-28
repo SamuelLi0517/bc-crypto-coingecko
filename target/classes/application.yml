@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
 # https://
 # api.coingecko.com
 # /api/v3/coins/markets
@@ -7,7 +7,7 @@ server:
 # key =CG-ANCRf2MK6yJT7B7GeiZTPnKR
 api:
   coingecko:
-    key: CG-ANCRf2MK6yJT7B7GeiZTPnKR
+    key: "CG-ANCRf2MK6yJT7B7GeiZTPnKR"
     domain: "api.coingecko.com"
     path: "/api/v3"
     endpoint: "/coins/markets"
